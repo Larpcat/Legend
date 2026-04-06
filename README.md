@@ -1,88 +1,111 @@
-# Legend
-Larpcat Meme Coin
+# LARPCAT LEGEND
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>$LARP — Fake It. Pump It.</title>
+<title>$LARP — The Internet’s Biggest Delusion</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background: #05070c;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b1220, #02050a);
   color: white;
   overflow-x: hidden;
 }
 
-/* Background glow */
-body::before {
-  content: "";
+/* NAVBAR */
+nav {
   position: fixed;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, #00ff88 0%, transparent 60%);
-  animation: pulse 6s infinite;
-  opacity: 0.1;
+  width: 100%;
+  top: 0;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+nav h2 {
+  color: #00ff88;
 }
 
-/* Header */
-header {
-  padding: 50px 20px;
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
 }
 
-h1 {
+.hero h1 {
   font-size: 4rem;
-  color: #00ff88;
-  text-shadow: 0 0 20px #00ff88;
+  background: linear-gradient(90deg, #00ff88, #00c3ff);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.tagline {
-  font-size: 1.3rem;
+.hero p {
+  margin-top: 15px;
   opacity: 0.8;
 }
 
-/* Hero Image */
 .hero img {
-  width: 320px;
+  width: 300px;
+  margin-top: 30px;
   border-radius: 20px;
-  margin-top: 20px;
-  box-shadow: 0 0 30px #00ff88;
+  box-shadow: 0 0 40px #00ff88;
 }
 
-/* Floating money */
-.money {
-  position: fixed;
-  top: -50px;
-  font-size: 24px;
-  animation: fall linear infinite;
+/* BUTTON */
+.btn {
+  margin-top: 25px;
+  padding: 15px 35px;
+  background: linear-gradient(90deg, #00ff88, #00c3ff);
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
-@keyframes fall {
-  to {
-    transform: translateY(110vh);
-  }
+.btn:hover {
+  transform: scale(1.1);
 }
 
-/* Sections */
+/* SECTION */
 .section {
-  padding: 60px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
 
-h2 {
-  color: #00ff88;
+/* GLASS CARDS */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
 }
 
-/* Cards */
+/* TOKENOMICS */
 .tokenomics {
   display: flex;
   justify-content: center;
@@ -91,118 +114,109 @@ h2 {
 }
 
 .card {
-  background: #0f1524;
-  padding: 25px;
-  border-radius: 15px;
-  width: 200px;
-  box-shadow: 0 0 15px rgba(0,255,136,0.2);
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 15px 30px;
-  margin: 10px;
-  background: #00ff88;
-  color: black;
-  font-weight: bold;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px #00ff88;
-}
-
-/* Fake chart animation */
-.chart {
-  width: 100%;
-  height: 200px;
-  background: linear-gradient(transparent, #00ff8840);
-  position: relative;
-  overflow: hidden;
-}
-
-.chart-line {
-  position: absolute;
-  width: 200%;
-  height: 2px;
-  background: #00ff88;
-  top: 60%;
-  animation: moveChart 4s linear infinite;
-}
-
-@keyframes moveChart {
-  from { left: -100%; }
-  to { left: 0; }
-}
-
-footer {
+  background: rgba(0,255,136,0.05);
   padding: 20px;
+  border-radius: 15px;
+  width: 180px;
+}
+
+/* ROADMAP */
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-left: 4px solid #00ff88;
+  text-align: left;
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  text-align: center;
   opacity: 0.6;
 }
+
+/* FLOATING MONEY */
+.money {
+  position: fixed;
+  top: -50px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>$LARP</h1>
-  <div class="tagline">Fake it. Post it. Pump it.</div>
-</header>
+<nav>
+  <h2>$LARP</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#roadmap">Roadmap</a>
+  </div>
+</nav>
 
 <div class="hero">
-  <img src="your-image.png" alt="LARP Coin">
+  <h1>$LARP</h1>
+  <p>The most delusional coin ever created</p>
+  <img src="your-image.png">
+  <a href="#" class="btn">🚀 BUY NOW</a>
 </div>
 
-<div class="chart">
-  <div class="chart-line"></div>
+<div id="about" class="section">
+  <div class="glass">
+    <h2>🚀 What is LARP?</h2>
+    <p>
+      LARP is not just a coin. It's a lifestyle.
+      Fake success. Viral flexing. Infinite delusion.
+      Built for TikTok kings and future millionaires.
+    </p>
+  </div>
 </div>
 
-<div class="section">
-  <h2>🚀 About</h2>
-  <p>
-    The most delusional coin on the internet. Built for TikTok flexers,
-    fake millionaires, and people who WILL make it (eventually).
-  </p>
-</div>
-
-<div class="section">
+<div id="tokenomics" class="section">
   <h2>📊 Tokenomics</h2>
   <div class="tokenomics">
     <div class="card">Supply<br><strong>1B</strong></div>
     <div class="card">Tax<br><strong>0%</strong></div>
-    <div class="card">Liquidity<br><strong>Burned 🔥</strong></div>
+    <div class="card">Liquidity<br><strong>Burned</strong></div>
   </div>
 </div>
 
-<div class="section">
-  <h2>🔥 Join the Pump</h2>
-  <a href="#" class="btn">Buy on Pump.fun</a>
-  <a href="#" class="btn">Join Telegram</a>
+<div id="roadmap" class="section">
+  <h2>🗺 Roadmap</h2>
+  <div class="roadmap">
+    <div class="step">Phase 1 — Launch & Meme Domination</div>
+    <div class="step">Phase 2 — Viral TikTok Explosion</div>
+    <div class="step">Phase 3 — Influencer Takeover</div>
+    <div class="step">Phase 4 — $100M Market Cap 🚀</div>
+  </div>
 </div>
 
 <footer>
-  Not financial advice. Pure LARP. © 2026
+  Not financial advice. Just vibes. © 2026 LARP
 </footer>
 
 <script>
-/* Floating money generator */
 function createMoney() {
-  const money = document.createElement("div");
-  money.classList.add("money");
-  money.innerText = "💸";
-  money.style.left = Math.random() * 100 + "vw";
-  money.style.animationDuration = (Math.random() * 3 + 2) + "s";
-  document.body.appendChild(money);
-
-  setTimeout(() => {
-    money.remove();
-  }, 5000);
+  const el = document.createElement("div");
+  el.className = "money";
+  el.innerText = "💸";
+  el.style.left = Math.random() * 100 + "vw";
+  el.style.animationDuration = (Math.random()*3+2)+"s";
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),5000);
 }
-
 setInterval(createMoney, 300);
 </script>
 
